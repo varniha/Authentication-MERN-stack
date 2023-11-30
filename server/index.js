@@ -13,7 +13,7 @@ connection();
 app.use(express.json());
 app.use(cors(
   {
-    origin: [https://authentication-mern-stack-k2t3.vercel.app"],
+    origin: [https://authentication-mern-stack-api.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }          
