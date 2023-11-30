@@ -3,20 +3,15 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const connection = require("./db");
-const userRoutes = require("./routes/users");
-const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/users.js");
+const authRoutes = require("./routes/auth.js");
 
 // database connection
 connection();
 
 // middlewares
 app.use(express.json());
-app.use(cors(
-  {
-    origin: [https://authentication-mern-stack-api.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }          
+app.use(cors(    
 ));
 
 // routes
